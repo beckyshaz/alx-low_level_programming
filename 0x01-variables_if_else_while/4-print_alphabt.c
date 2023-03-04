@@ -5,18 +5,24 @@
  */
 int main(void)
 {
-	char ch;
-	
-	
+	char ch,e,q;
+
+
+
 	ch = 'a';
-	while  (ch <= 'z' && ch != ('q'&& 'e') )	
+	e = 'e';
+	q = 'q';
+	for  ( ch = 'a' ; ch <= 'z' ; ch++)
 	{
-		
+
+	if (ch  != ( q &&  e ))	
+	
+
 
 		putchar(ch);
-		ch++;
 		
-		
+
+
 
 	}
 	{
