@@ -1,34 +1,14 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
 #include "main.h"
 /**
- *main - entry point
- *Return: 0 (success)
- *to print whether number is positive or negative
+ * positive_or_negative - function that prints if integer is + or -
+ *@i: character to be checked
+ *Return: ALways 0
  */
-int main(void)
+void positive_or_negative(int i)
 {
-	        int n;
-
-
-		srand(time(0));
-		 n = rand() - RAND_MAX / 2;
-		    if (n > 0)
-			 {
-			     printf("%d is positive\n", n);
-		         }
-		    else if (n == 0)
-		         {
-			    printf("%d is zero\n", n);
-		          }
-		    else
-		          {
-		             printf("%d is negative\n", n);
-		          }
-
-		     return (0);
-
-
-
+	if (i < 0)
+		printf("%d is negative\n", i);
+	else
+		printf("%d is positive\n", i);
 }
+
