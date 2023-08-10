@@ -11,7 +11,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *ptrmalloc;
 
-	ptrmalloc = malloc(sizeof(unsigned int) * b);
+	ptrmalloc = malloc(b);
 	if (ptrmalloc == NULL)
 	{
 		exit(98);
