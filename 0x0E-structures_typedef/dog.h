@@ -7,6 +7,12 @@
  *@owner :third parameter owner of the dog
  *Description: Header file containing a data type struct dog
  */
+
+/**
+ *dog_t - Typedef for struct dog
+ */ 
+typedef struct dog dog_t;
+
 struct dog
 {
 	char *name;
