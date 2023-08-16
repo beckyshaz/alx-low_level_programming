@@ -2,7 +2,7 @@
 /**
  *get_op_func -  returns a pointer to the function that corresponds to the operator
  *@s : is the operator passed as argument to the program
- *
+ *Return 0 (Success)
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -19,9 +19,8 @@ int (*get_op_func(char *s))(int, int)
     while (i < 5)
     {
 	    if (*s == *ops[i].op)
-		    return (*ops[i].f);
+		    return ((*ops[i].f));
 	    i++;
     }
-    return 0;
-
+    return (0);
 }
