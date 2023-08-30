@@ -42,7 +42,7 @@ char *_strcpy(char*dest, char*src)
  *new_dog - Function that creates a new dog
  *@name: Name of dog
  *@age: Age of dog
- *@owner: Owner of dog
+ *@owner: Owner of dg
  *Return: pointer to new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
