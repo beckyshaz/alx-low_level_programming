@@ -28,12 +28,17 @@ void print_all(const char * const format, ...)
 							case'f':
 							printf("%s%f", sp, va_arg(lists, double));
 							break;
-						case's'
+							case's':
+
 							st = va_arg(lists, char*);
+
 								if (!st)
 								st = "(nil)";
+
 							printf("%s%s", sp, st);
+
 							break;
+
 						default:
 							i++;
 							continue;
