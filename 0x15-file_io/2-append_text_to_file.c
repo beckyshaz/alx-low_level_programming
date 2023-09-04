@@ -19,10 +19,10 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		for (text_len = 0; text_content[text_len]; text_len++)
 			;
+		w = write(fd, text_content, text_len);
+		if (w == -1)
+			return (-1);
 	}
-	w = write(fd, text_content, text_len);
-	if (w == -1)
-		return (-1);
 	close(fd);
 	return (1);
 }
