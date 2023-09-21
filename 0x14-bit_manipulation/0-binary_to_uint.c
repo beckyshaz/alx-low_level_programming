@@ -8,22 +8,16 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i, decimal, decvalue, strlen;
+	unsigned int decimal_value = 0;
+	int index;
 
-	decimal = 0;
-	decvalue = 1;
-
-	if (b == NULL)
+	if (!b)
 		return (0);
-	while (b[strlen] != '\0')
-		strlen++;
-	for (i = (strlen - 1); b[i] >= 0; i--)
+	for (index = 0; b[index]; index++)
 	{
-		if (b[i] == '1')
-		{
-			decimal += decvalue;
-			decvalue *= 2
-		}
+		if (b[index] < '0' || b[index] > '1')
+			return (0);
+		decimal_value = 2 * decimal_value + (b[index] - '0');
 	}
-	return (decimal);
+	return (decimal_value);
 }
