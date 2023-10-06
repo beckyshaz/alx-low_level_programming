@@ -6,7 +6,7 @@
  *@argv: argument vector
  *Return: void
  */
-void handle_error(int file_from, int file_to, char **argv)
+void handle_error(int file_from, int file_to, char *argv[])
 {
 	if (file_from == -1)
 	{
@@ -25,7 +25,7 @@ void handle_error(int file_from, int file_to, char **argv)
  *@argv: this is pointer to argument vector
  *Return: Always 0
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int file_to, error_close, file_from;
 	char buff[1024];
