@@ -19,6 +19,6 @@ int main(void)
 		next_num = num1 + num2;
 		num1 = num2;
 		num2 = next_num;
-	} 
+	}
 	printf("\n");
 }
