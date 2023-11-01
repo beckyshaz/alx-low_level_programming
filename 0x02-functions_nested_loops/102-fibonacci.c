@@ -21,4 +21,5 @@ int main(void)
 		num2 = next_num;
 	}
 	printf("\n");
+	return (0);
 }
