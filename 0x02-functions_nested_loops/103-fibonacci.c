@@ -9,13 +9,13 @@ int main(void)
 	int num1 = 1;
 	int num2 = 2;
 	int limit = 4000000;
-	int index, next_num;
+	int next_num;
 
-	for (index = 1; index < limit; index++)
+	while (next_num < limit)
 	{
-		if (index % 2 == 0)
-			sum = sum + index;
-		next_num = num2 + num1;
+		next_num = num1 + num2;
+		if (next_num % 2 == 0)
+			sum = sum + next_num;
 		num1 = num2;
 		num2 = next_num;
 	}
