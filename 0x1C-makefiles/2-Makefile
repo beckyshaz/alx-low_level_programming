@@ -1,17 +1,17 @@
 CC = gcc
-SRC = $(wildcard *.c)
-OBJ = $(SRC:%.c=%.o)
+SRC = main.c school.c
+OBJ = main.o school.o
 NAME = school
-
-all: $(NAME)
+all: $(NAME) clean
 
 $(NAME): $(OBJ)
-	$(CC) -o $< $@
-%.o: %.c m.h
-	$(CC) -c $< $@
+	$(CC) main.o school.o -o $@
+
+main.o: main.c
+	$(CC) -c $< -o $@
+
+school.o: school.c 
+	$(CC) -c $< -o $@
 
 clean:
-	rm  *.o
-
-
-
+	@rm -f $(OBJ) $(NAME)
