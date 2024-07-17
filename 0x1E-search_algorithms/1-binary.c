@@ -12,11 +12,12 @@
 int binary_search(int *array, size_t size, int value)
 {
 	size_t r, l, mid;
+
 	l = 0;
 	r = size - 1;
 
 	if (array == NULL)
-		return -1;
+		return (-1);
 	while (l < r)
 	{
 		mid = (l + r) / 2;
@@ -25,9 +26,9 @@ int binary_search(int *array, size_t size, int value)
 		if (value == array[mid])
 			return (mid);
 		else if (value < array[mid])
-			r = mid -1;
+			r = mid - 1;
 		else
 			l = mid + 1;
 	}
-	return -1;
+	return (-1);
 }
